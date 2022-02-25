@@ -11,10 +11,13 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b05ac766e.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
+    
+
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-secondary bg-gradient">
         <div class="col-md-12 px-0">
             <h1 class="display-4 fst-italic"><a href="#">Trinity miniblog</a></h1>
@@ -26,6 +29,13 @@
 
     <div class="content container">
         <div class="row">
+            <div class="col-md-12 d-flex bd-highlight mb-3">
+                <div class="ms-auto p-2 bd-highlight">
+                    <a href="{% url 'post_new' %}" class="btn btn-info btn-lg text-white">
+                        <i class="fas fa-solid fa-plus"></i> New Post
+                    </a>
+                </div>
+            </div>
             <div class="col-md-8">
                 {% block content %}
                 {% endblock %}
